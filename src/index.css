@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app_food_headtext{
+  color: #000;
+font-family: Mulish;
+font-size: 50px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.app_food_headtext-border{
+  width: 306px;
+height: 5px;
+flex-shrink: 0;
+background: #fff;
+}
+.app_foodCard-btn{
+  display: flex;
+padding: 10px;
+flex-direction: column;
+align-items: flex-start;
+gap: 10px;
+border-radius: 10px;
+background: #F1D5BB;
+box-shadow: 1.5px 2px 1px 0px #f4d896;
+}
+.app_food_card_itemName{
+  color: #000;
+font-family: Mulish;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
