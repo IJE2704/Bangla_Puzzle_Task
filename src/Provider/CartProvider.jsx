@@ -3,6 +3,7 @@ import Swal from "sweetalert2";
 export const cartContext = createContext(null);
 const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
+  const [enter,setEnter] = useState(false);
   const addToCart = (item) => {
     const itemCheck = cartItems.some((cartItem) => cartItem.id === item.id);
     if (!itemCheck) {
@@ -32,6 +33,8 @@ const CartProvider = ({ children }) => {
     cartItems,
     addToCart,
     removeItemCart,
+    enter,
+    setEnter
   };
   return <cartContext.Provider value={state}>{children}</cartContext.Provider>;
 };
