@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { AiFillLike } from "react-icons/ai";
+import { cartContext } from "../Provider/CartProvider";
 
 
 const FoodCard = ({item}) => {
   const {imgUrl,productName,productPrice} = item;
+  const {addToCart,cartItems} = useContext(cartContext);
+  
   return (
     <div className="bg-[#fff] w-[230px] p-2.5 rounded-md mt-10">
       <div className="h-[200px] rounded-sm">
@@ -17,7 +20,7 @@ const FoodCard = ({item}) => {
       </div>
       <div className="flex  justify-between items-center mt-2">
         <p>{productPrice} Tk.</p>
-        <button type="button" className="app_foodCard-btn">Add to cart</button>
+        <button type="button" onClick={()=>addToCart(item)} className="app_foodCard-btn">Add to cart</button>
       </div>
     </div>
   );

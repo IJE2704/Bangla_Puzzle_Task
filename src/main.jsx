@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import Food from './Components/Food.jsx';
 import Cart from './Components/Cart.jsx';
+import CartProvider from './Provider/CartProvider.jsx';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,6 +28,6 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <CartProvider><RouterProvider router={router} /></CartProvider>
   </React.StrictMode>,
 )
