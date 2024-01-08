@@ -4,6 +4,7 @@ import FoodCard from './FoodCard';
 import { cartContext } from '../Provider/CartProvider';
 
 const Food = () => {
+  // get the setEnter from context. if user enter then update 
   const {setEnter} = useContext(cartContext);
   useEffect(()=>{
     setEnter(true);

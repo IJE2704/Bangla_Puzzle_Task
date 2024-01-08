@@ -8,6 +8,7 @@ const Cart = () => {
   useEffect(()=>{
     setEnter(true);
   },[])
+  // if user has not added anything then this function will shoe
   if (cartItems.length === 0) {
     return (
       <div className="mx-4 p-10">
@@ -19,7 +20,7 @@ const Cart = () => {
       </div>
     );
   }
-
+// if use has added anything then this function will work
   return (
     <div className="mx-4 p-10">
       <h1 className="app_food_headtext">CART</h1>
@@ -40,7 +41,7 @@ const Cart = () => {
 
         <div className="py-5 px-10 bg-[#F1D5BB] rounded-3xl">
           <div className="w-[250px] flex flex-col justify-center">
-            <h1 className="text-center text-5xl font-bold">Bill</h1>
+            <h1 className="text-center text-3xl font-semibold">Order Summary</h1>
             <div className="h-[1px] w-full bg-black mt-5 "></div>
             <p>Items: {cartItems.length}</p>
             <p className="text-xl  mt-5">Items total price: {totalCost} tk</p>

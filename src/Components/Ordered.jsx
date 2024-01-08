@@ -12,6 +12,7 @@ const Ordered = ({
   const { id, imgUrl, productName, productPrice } = item;
   const [quantity, setQuantity] = useState(1);
 
+  // when user enter this page then useEffect will execute first and calculate total price
   useEffect(() => {
     const totalPrice = cartItems.reduce((acc, object) => {
       return acc + object.productPrice;
@@ -19,10 +20,7 @@ const Ordered = ({
     setTotalCost(totalPrice);
   }, [cartItems, setTotalCost]);
 
-  useEffect(() => {
-    // alert('quntity update');
-  }, [quantity]);
-
+//  this function will increase or decrase the qunatity of food item
   const handleQuantity = (value) => {
     if (value === "-") {
       if (quantity === 1) {

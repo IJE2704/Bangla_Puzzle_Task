@@ -10,14 +10,16 @@ const Navbar = () => {
   const location = useLocation();
   const [activeRoute, setActiveRoute] = useState(location.pathname);
 
+//  this function detect which page the user currently on
   const handleRouteClick = (route) => {
     setActiveRoute(route);
   };
 
+  // user currently on which page the color of the icon will change
   const getIconColor = (route) => {
     return route === activeRoute ? "#000" : "#fff";
   };
-
+//  this function will change the selected icon background
   const getBackgroundColor = (route) => {
     return route === activeRoute ? "#F1D5BB" : "transparent";
   };
